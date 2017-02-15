@@ -28,6 +28,8 @@ func fmtUptime(stats *Stats) string {
 }
 
 func fmtBytes(val uint64) string {
+	// -- UPDATE ON 20170215
+/*
 	if val < 1024 {
 		return fmt.Sprintf("%d bytes", val)
 	} else if val < 1024*1024 {
@@ -37,4 +39,7 @@ func fmtBytes(val uint64) string {
 	} else {
 		return fmt.Sprintf("%6.2f GiB", float64(val)/1024.0/1024.0/1024.0)
 	}
+*/
+	return fmt.Sprintf("%d bytes", val)
+	// -- END UPDATE
 }
